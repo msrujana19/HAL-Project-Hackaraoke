@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Symptoms</title>
+  <style>
+    body {
+      font-family: 'Prata',serif;
+      background-color: #ffe6f2;
+      color: #333;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    input[type="text"], input[type="date"], input[type="number"], select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .section {
+      margin-top: 1.5rem;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    button {
+      background-color: #d63384;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c21872;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .input-group input {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Log Your Symptoms</h1>
+    <form id="symptom-form" action="/predict" method="POST">
+      
+
+      <div class="section">
+        <label for="symptom">Describe Your Symptoms</label>
+        <input type="text" id="symptom" name="symptom" placeholder="E.g., headache, nausea">
+      </div>
+
+      <div class="section">
+        <label for="pregnancy-test">Pregnancy Test Result</label>
+        <select id="pregnancy-test" name="pregnancy-test">
+          <option value="">Select result</option>
+          <option value="positive">Positive</option>
+          <option value="negative">Negative</option>
+          <option value="not-tested">Not Tested</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="ovulation-test">Digestion and Stool</label>
+        <select id="ovulation-test" name="ovulation-test">
+          <option value="">Select result</option>
+          <option value="Constipation">Constipation</option>
+          <option value="Diarrhea">Diarrhea</option>
+          <option value="Bloating">Bloating</option>
+        </select>
+      </div>
+      <div class="section">
+        <label for="ovulation-test">Physical Acticity</label>
+        <select id="ovulation-test" name="ovulation-test">
+          <option value="">Select result</option>
+          <option value="Didn't exercise">Didn't exercise</option>
+          <option value="Gym">Gym</option>
+          <option value="Running">Running</option>
+          <option value="Yoga">Yoga</option>
+          <option value="Walking">Walking</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="water-intake">Water Intake (in liters)</label>
+        <input type="number" id="water-intake" name="water-intake" placeholder="E.g., 2.5">
+      </div>
+
+      <div class="section">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+
+      <div class="button-container">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+document.getElementById('symptom-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
+  
+  try {
+    const response = await fetch('http://127.0.0.1:5000/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+
+    const result = await response.json();
+    alert(`Prediction: ${result.prediction}`);
+  } catch (error) {
+    alert(`Error fetching prediction: ${error.message}`);
+  }
+});
+
+  </script>
+</body>
+</html>

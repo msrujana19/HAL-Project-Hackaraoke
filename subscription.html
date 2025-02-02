@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Subscription Plan</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+.subscription-page {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #d81b60;
+}
+
+.subscription-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.plan {
+    background-color: #f8bbd0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.subscribe-btn {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subscribe-btn:hover {
+    background-color: #c2185b;
+}
+
+#loading-message {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #d81b60;
+}
+
+.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="subscription-page">
+        <h1>Subscribe to Access Premium Features</h1>
+        <p>Choose the plan that fits your needs and start enjoying exclusive content!</p>
+        
+        <div class="subscription-options">
+            <div class="plan">
+                <h2>Basic Plan</h2>
+                <p>$5/month</p>
+                <button class="subscribe-btn" onclick="subscribe('basic')">Subscribe Now</button>
+            </div>
+            <div class="plan">
+                <h2>Premium Plan</h2>
+                <p>$10/month</p>
+                <button class="subscribe-btn" onclick="subscribe('premium')">Subscribe Now</button>
+            </div>
+        </div>
+        
+        <div id="loading-message" class="hidden">
+            <p>Redirecting you to the payment gateway...</p>
+        </div>
+    </div>
+
+    <script>
+        function subscribe(plan) {
+    // Show loading message
+    document.getElementById('loading-message').classList.remove('hidden');
+    
+    // Simulate a delay before redirecting
+    setTimeout(function() {
+        let redirectUrl = "";
+
+        // Set redirect URL based on selected plan
+        if (plan === 'basic') {
+            redirectUrl = "https://example.com/payment-basic"; // Replace with your actual payment URL for Basic Plan
+        } else if (plan === 'premium') {
+            redirectUrl = "https://example.com/payment-premium"; // Replace with your actual payment URL for Premium Plan
+        }
+
+        // Redirect to the respective payment page
+        window.location.href = redirectUrl;
+    }, 2000); // 2 seconds delay before redirect
+}
+    </script>
+</body>
+</html>
+<a
+
+
+
+
+

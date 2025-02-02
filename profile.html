@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed right-0 top-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300">
+    <div class="p-4 border-b">
+      <h2 class="text-xl font-semibold">Profile</h2>
+      <button id="closeSidebar" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">&times;</button>
+    </div>
+
+    <div class="p-4">
+      <div class="flex items-center mb-4">
+        <img src="images/girl.png" alt="Profile" class="rounded-full w-12 h-12">
+        <div class="ml-4">
+          <h3 class="text-lg font-medium">Srujana M</h3>
+          <p class="text-sm text-gray-500">mssrujana19@gmail.com</p>
+        </div>
+      </div>
+
+      <ul class="space-y-4">
+        <li><a href="#" class="block text-gray-700 hover:text-blue-600">Registrations/Applications</a></li>
+        <li><a href="#" class="block text-gray-700 hover:text-blue-600">Referrals</a></li>
+        <li><a href="#" class="block text-gray-700 hover:text-blue-600">My Rounds</a></li>
+        <li><a href="#" class="block text-gray-700 hover:text-blue-600">Unstop Awards Nominations</a></li>
+        <li><a href="#" class="block text-gray-700 hover:text-blue-600">Watchlist</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    // Open sidebar when the profile icon is clicked on the main page
+    window.addEventListener('openSidebar', () => {
+      sidebar.classList.remove('translate-x-full');
+    });
+    window.dispatchEvent(new Event('openSidebar'));
+
+    closeSidebar.addEventListener('click', () => {
+      sidebar.classList.add('translate-x-full');
+    });
+  </script>
+</body>
+</html>

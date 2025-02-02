@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="../css/mood.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Mood Tracker 🌸</h1>
+    
+    <div class="mood-selector">
+      <div>
+        <label for="mood">Select your mood today:</label>
+        <select id="mood">
+          <option value="happy">😊 Happy</option>
+          <option value="calm">😌 Calm</option>
+          <option value="anxious">😰 Anxious</option>
+          <option value="sad">😢 Sad</option>
+          <option value="angry">😡 Angry</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="energy">Energy Level (1-5):</label>
+        <input type="number" id="energy" min="1" max="5" placeholder="e.g., 3" />
+      </div>
+      
+      <div>
+        <label for="gratitude">Gratitude (optional):</label>
+        <input type="text" id="gratitude" placeholder="What are you grateful for today?" />
+      </div>
+      
+      <div>
+        <label for="reflection">Reflection (optional):</label>
+        <textarea id="reflection" placeholder="A positive thought or reflection for today..."></textarea>
+      </div>
+
+      <div>
+        <button onclick="trackMood()">Track Mood</button>
+      </div>
+    </div>
+
+    <div class="insights" id="insights"></div>
+
+    <h2>Your Mood History</h2>
+    <table id="mood-history">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Mood</th>
+          <th>Energy Level</th>
+          <th>Gratitude</th>
+          <th>Reflection</th>
+          <th>Remarks</th>  <!-- Updated Remarks column -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic content will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../js/mood.js"></script>
+</body>
+</html>
