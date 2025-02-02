@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Women's Health</title>
+  <style>
+    body {
+  font-family: 'Prata',serif;
+  background-color: #fce4ec;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  padding-top: 50px;
+  background-color: #fff;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #d63384;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 1.2em;
+  color: #d63384;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.question:hover {
+  color: #c21872;
+}
+
+.answer {
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
+  display: none;
+}
+
+.faq-item.active .answer {
+  display: block;
+}
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <h3 class="question">What is the best way to track my period?</h3>
+      <p class="answer">Tracking your period is easy! Use our app to log your cycle dates and receive reminders for tracking your flow, symptoms, and moods.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="question">How can I improve my water intake?</h3>
+      <p class="answer">Try to drink at least 8 cups (2 liters) of water daily. Set reminders on your phone or our app to stay hydrated throughout the day.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="question">How can I manage stress during menopause?</h3>
+      <p class="answer">Regular exercise, yoga, deep breathing, and speaking to a healthcare provider for support can help manage stress during menopause.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="question">What are the benefits of tracking my symptoms?</h3>
+      <p class="answer">Tracking your symptoms can help identify patterns, manage your health better, and communicate effectively with your healthcare provider.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="question">How can I deal with postpartum depression?</h3>
+      <p class="answer">Seeking support from a therapist, reaching out to loved ones, and practicing self-care are key steps. Our community and resources are here to help you.</p>
+    </div>
+  </div>
+  <script>document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });</script>
+</body>
+</html>
