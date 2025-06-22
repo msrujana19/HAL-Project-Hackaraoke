@@ -1,12 +1,15 @@
-EduCare is a comprehensive web platform dedicated to supporting women's health, with a strong focus on postpartum care. It provides trusted information, personalized resources, and a conversational AI chatbot that offers real-time assistance and emotional support.
+heCares is a web-based health platform designed to support women, especially during and after pregnancy. It combines expert health content, emotional support tools, and an AI-powered chatbot to provide reliable, accessible, and personalized care.
 
 Key Features
-Postpartum Health Resources: Curated articles, tips, and FAQs focused on physical, mental, and emotional well-being after childbirth.
+Postpartum Wellness Resources: Curated content on recovery, breastfeeding, emotional health, nutrition, and baby care.
 
-AI-Powered Chatbot: An empathetic virtual assistant trained to answer questions related to women’s health, postpartum challenges, nutrition, self-care, and when to seek medical help.
+Interactive Chatbot: A friendly AI assistant that answers questions, shares tips, and offers round-the-clock support.
 
-Health Tracker Tools: Track recovery, mood, and nutrition progress post-delivery.
+Mood Tracker: A simple daily tool to log and visualize emotional well-being, helping users identify trends and take action early.
 
+Clean, Responsive Design: Mobile-friendly and easy to navigate for users at home or on the go.
+
+Confidential & Supportive: A safe space for women to ask health-related questions, especially around sensitive or emotional issues.
 RIGHTS
 
 You are allowed to use it in your personal projects and commercial projects.
