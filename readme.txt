@@ -1,18 +1,11 @@
-Get the PRO version here:
-https://templatesjungle.gumroad.com/l/care-beauty-ecommerce-website-template
+EduCare is a comprehensive web platform dedicated to supporting women's health, with a strong focus on postpartum care. It provides trusted information, personalized resources, and a conversational AI chatbot that offers real-time assistance and emotional support.
 
-It is a free Bootstrap HTML CSS template by TemplatesJungle.com
-You can use this template as a starter template and start building as you require.
+Key Features
+Postpartum Health Resources: Curated articles, tips, and FAQs focused on physical, mental, and emotional well-being after childbirth.
 
-The code is consistent and can be easily maintained as we have followed a good coding standards. We want everyone to easily understand it and modify it according to their requirement. As the main goal of providing these templates is to give you something to work on before even starting.
+AI-Powered Chatbot: An empathetic virtual assistant trained to answer questions related to women’s health, postpartum challenges, nutrition, self-care, and when to seek medical help.
 
-
-FREE FOR BOTH PERSONAL AND COMMERCIAL USE
-
-This HTML Template is provided by TemplatesJungle.com and is free to use in both personal and commercial projects as long as you don't remove our credit link in the footer.
-
-However, you can remove the credit link by paying for PRO version of the template which also includes additional pages.
-
+Health Tracker Tools: Track recovery, mood, and nutrition progress post-delivery.
 
 RIGHTS
 
