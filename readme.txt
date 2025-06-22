@@ -1,4 +1,4 @@
-heCares is a web-based health platform designed to support women, especially during and after pregnancy. It combines expert health content, emotional support tools, and an AI-powered chatbot to provide reliable, accessible, and personalized care.
+sheCares is a web-based health platform designed to support women, especially during and after pregnancy. It combines expert health content, emotional support tools, and an AI-powered chatbot to provide reliable, accessible, and personalized care.
 
 Key Features
 Postpartum Wellness Resources: Curated content on recovery, breastfeeding, emotional health, nutrition, and baby care.
